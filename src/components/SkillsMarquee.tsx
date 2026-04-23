@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 import {
+  Bot,
+  Cloud,
   Code2,
+  Container,
   Database,
-  FileCode,
+  Feather,
   Figma,
+  FileCode,
   GitBranch,
   Globe,
   Layers,
+  Palette,
   Server,
   Terminal,
-  Palette,
-  Cloud,
-  Feather,
   Zap,
-  Bot,
-  Container,
 } from "lucide-react";
 
 const skills = [
@@ -49,40 +49,36 @@ const SkillBadge = ({
   icon: typeof Code2;
   color: string;
 }) => (
-  <div className="glass-card flex items-center gap-3 px-5 py-3 rounded-xl mx-2 shrink-0 hover:glow-violet transition-all duration-300 group">
+  <div className="glass-card group mx-2 flex shrink-0 items-center gap-3 rounded-xl px-5 py-3 transition-all duration-300 hover:glow-violet">
     <Icon
       size={18}
       strokeWidth={1.5}
-      className={`${color} group-hover:scale-110 transition-transform`}
+      className={`${color} transition-transform group-hover:scale-110`}
     />
-    <span className="text-sm font-medium text-foreground whitespace-nowrap">
-      {name}
-    </span>
+    <span className="whitespace-nowrap text-sm font-medium text-foreground">{name}</span>
   </div>
 );
 
 const SkillsMarquee = () => {
-  // Duplicate once for a seamless -50% track translation.
   const looped = [...skills, ...skills];
 
   return (
-    <section id="skills" className="relative py-24 overflow-hidden">
+    <section id="skills" className="relative overflow-hidden py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-12 px-6"
+        className="mb-12 px-6 text-center"
       >
-        <span className="font-mono text-xs text-secondary tracking-widest uppercase">
+        <span className="font-mono text-xs tracking-widest text-secondary uppercase">
           Tech Stack
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gradient-violet">
+        <h2 className="text-gradient-violet mt-2 text-3xl font-bold md:text-4xl">
           Skills & Technologies
         </h2>
       </motion.div>
 
-      {/* Row 1 - Left */}
       <div className="marquee-row mb-4">
         <div className="marquee-track">
           {looped.map((skill, i) => (
@@ -91,7 +87,6 @@ const SkillsMarquee = () => {
         </div>
       </div>
 
-      {/* Row 2 - Right */}
       <div className="marquee-row">
         <div className="marquee-track marquee-track-reverse">
           {[...looped].reverse().map((skill, i) => (
