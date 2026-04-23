@@ -65,7 +65,7 @@ const HeroSection = () => {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <motion.div variants={item} className="mb-4">
               <span className="font-mono text-sm text-secondary tracking-widest uppercase">
-                Full Stack Developer & Web Designer
+                Full Stack Developer & DevOps Engineer
               </span>
             </motion.div>
 
