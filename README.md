@@ -83,15 +83,6 @@ src/
 - Replace images in src/assets as needed.
 - Metadata, title, and favicon are configured in index.html.
 
-## Deployment
-
-You can deploy the generated dist output to any static hosting platform, such as:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- Cloudflare Pages
-
 ## Contact
 
 For collaborations or opportunities, reach out through the contact section of the site.
