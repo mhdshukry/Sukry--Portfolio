@@ -12,7 +12,7 @@ import railMateImage from "@/assets/railmate.png";
 const projects = [
   {
     title: "Sukry Portfolio",
-    subtitle: "Personal Portfolio",
+    subtitle: "Front-End",
     image: portfolioImage,
     github: "https://github.com/mhdshukry/Sukry--Portfolio",
   },
@@ -48,7 +48,7 @@ const projects = [
   },
   {
     title: "Foody",
-    subtitle: "Full-Stack Web",
+    subtitle: "Front-End",
     image: foodyImage,
     github: "https://github.com/mhdshukry/Foody",
   },
@@ -60,7 +60,7 @@ const projects = [
   },
   {
     title: "Health App",
-    subtitle: "Full-Stack Web",
+    subtitle: "Mobile App",
     image: "/placeholder.svg",
     github: "https://github.com/mhdshukry/Health-App",
   },
@@ -78,7 +78,7 @@ const projects = [
   },
   {
     title: "Trail Mate Lanka",
-    subtitle: "Full-Stack Web",
+    subtitle: "Front-End",
     image: railMateImage,
     github: "https://github.com/mhdshukry/Trail-Mate-Lanka-Website",
   },
