@@ -26,7 +26,12 @@ import {
   SiSpringboot,
   SiTerraform,
 } from "react-icons/si";
-import { FaDatabase, FaDiagramProject, FaJava, FaMicrosoft } from "react-icons/fa6";
+import {
+  FaDatabase,
+  FaDiagramProject,
+  FaJava,
+  FaMicrosoft,
+} from "react-icons/fa6";
 
 type Skill = {
   name: string;
@@ -120,34 +125,169 @@ const skillCategories: SkillCategory[] = [
 ];
 
 const orbitSkills: Skill[] = [
-  { name: "HTML5", Icon: SiHtml5, color: "text-orange-400", bgColor: "bg-orange-500/15" },
-  { name: "CSS3", Icon: SiCss, color: "text-sky-400", bgColor: "bg-sky-500/15" },
-  { name: "JavaScript", Icon: SiJavascript, color: "text-yellow-400", bgColor: "bg-yellow-400/15" },
-  { name: "React.js", Icon: SiReact, color: "text-cyan-300", bgColor: "bg-cyan-400/15" },
-  { name: "PHP", Icon: SiPhp, color: "text-indigo-300", bgColor: "bg-indigo-400/15" },
-  { name: "Laravel", Icon: SiLaravel, color: "text-red-300", bgColor: "bg-red-500/15" },
-  { name: "MySQL", Icon: SiMysql, color: "text-sky-300", bgColor: "bg-sky-400/15" },
-  { name: "MongoDB", Icon: SiMongodb, color: "text-lime-300", bgColor: "bg-lime-400/15" },
-  { name: "Express.js", Icon: SiExpress, color: "text-neutral-300", bgColor: "bg-slate-200/10" },
-  { name: "Node.js", Icon: SiNodedotjs, color: "text-green-300", bgColor: "bg-green-400/15" },
-  { name: "Java", Icon: FaJava, color: "text-amber-400", bgColor: "bg-amber-400/15" },
-  { name: "JavaFX", Icon: FaJava, color: "text-orange-300", bgColor: "bg-orange-400/15" },
+  {
+    name: "HTML5",
+    Icon: SiHtml5,
+    color: "text-orange-400",
+    bgColor: "bg-orange-500/15",
+  },
+  {
+    name: "CSS3",
+    Icon: SiCss,
+    color: "text-sky-400",
+    bgColor: "bg-sky-500/15",
+  },
+  {
+    name: "JavaScript",
+    Icon: SiJavascript,
+    color: "text-yellow-400",
+    bgColor: "bg-yellow-400/15",
+  },
+  {
+    name: "React.js",
+    Icon: SiReact,
+    color: "text-cyan-300",
+    bgColor: "bg-cyan-400/15",
+  },
+  {
+    name: "PHP",
+    Icon: SiPhp,
+    color: "text-indigo-300",
+    bgColor: "bg-indigo-400/15",
+  },
+  {
+    name: "Laravel",
+    Icon: SiLaravel,
+    color: "text-red-300",
+    bgColor: "bg-red-500/15",
+  },
+  {
+    name: "MySQL",
+    Icon: SiMysql,
+    color: "text-sky-300",
+    bgColor: "bg-sky-400/15",
+  },
+  {
+    name: "MongoDB",
+    Icon: SiMongodb,
+    color: "text-lime-300",
+    bgColor: "bg-lime-400/15",
+  },
+  {
+    name: "Express.js",
+    Icon: SiExpress,
+    color: "text-neutral-300",
+    bgColor: "bg-slate-200/10",
+  },
+  {
+    name: "Node.js",
+    Icon: SiNodedotjs,
+    color: "text-green-300",
+    bgColor: "bg-green-400/15",
+  },
+  {
+    name: "Java",
+    Icon: FaJava,
+    color: "text-amber-400",
+    bgColor: "bg-amber-400/15",
+  },
+  {
+    name: "JavaFX",
+    Icon: FaJava,
+    color: "text-orange-300",
+    bgColor: "bg-orange-400/15",
+  },
   { name: "C", Icon: SiC, color: "text-blue-300", bgColor: "bg-blue-400/15" },
-  { name: "Dart", Icon: SiDart, color: "text-sky-300", bgColor: "bg-sky-400/15" },
-  { name: "Python", Icon: SiPython, color: "text-emerald-300", bgColor: "bg-emerald-400/15" },
-  { name: "Flutter", Icon: SiFlutter, color: "text-sky-300", bgColor: "bg-sky-400/15" },
-  { name: "Spring Boot", Icon: SiSpringboot, color: "text-lime-300", bgColor: "bg-lime-400/15" },
-  { name: "REST API", Icon: FaDiagramProject, color: "text-emerald-300", bgColor: "bg-emerald-400/15" },
-  { name: "Docker", Icon: SiDocker, color: "text-cyan-300", bgColor: "bg-cyan-400/15" },
-  { name: "Git", Icon: SiGit, color: "text-orange-400", bgColor: "bg-orange-500/15" },
-  { name: "GitHub", Icon: SiGithub, color: "text-foreground", bgColor: "bg-slate-100/20" },
-  { name: "Jenkins", Icon: SiJenkins, color: "text-rose-300", bgColor: "bg-rose-400/15" },
-  { name: "Postman", Icon: SiPostman, color: "text-orange-300", bgColor: "bg-orange-400/15" },
-  { name: "Ansible", Icon: SiAnsible, color: "text-red-300", bgColor: "bg-red-500/15" },
-  { name: "Prometheus", Icon: SiPrometheus, color: "text-orange-300", bgColor: "bg-orange-400/15" },
-  { name: "Terraform", Icon: SiTerraform, color: "text-violet-300", bgColor: "bg-violet-400/15" },
-  { name: "Grafana", Icon: SiGrafana, color: "text-amber-300", bgColor: "bg-amber-400/15" },
-  { name: "Microsoft Azure", Icon: FaMicrosoft, color: "text-sky-300", bgColor: "bg-sky-400/15" },
+  {
+    name: "Dart",
+    Icon: SiDart,
+    color: "text-sky-300",
+    bgColor: "bg-sky-400/15",
+  },
+  {
+    name: "Python",
+    Icon: SiPython,
+    color: "text-emerald-300",
+    bgColor: "bg-emerald-400/15",
+  },
+  {
+    name: "Flutter",
+    Icon: SiFlutter,
+    color: "text-sky-300",
+    bgColor: "bg-sky-400/15",
+  },
+  {
+    name: "Spring Boot",
+    Icon: SiSpringboot,
+    color: "text-lime-300",
+    bgColor: "bg-lime-400/15",
+  },
+  {
+    name: "REST API",
+    Icon: FaDiagramProject,
+    color: "text-emerald-300",
+    bgColor: "bg-emerald-400/15",
+  },
+  {
+    name: "Docker",
+    Icon: SiDocker,
+    color: "text-cyan-300",
+    bgColor: "bg-cyan-400/15",
+  },
+  {
+    name: "Git",
+    Icon: SiGit,
+    color: "text-orange-400",
+    bgColor: "bg-orange-500/15",
+  },
+  {
+    name: "GitHub",
+    Icon: SiGithub,
+    color: "text-foreground",
+    bgColor: "bg-slate-100/20",
+  },
+  {
+    name: "Jenkins",
+    Icon: SiJenkins,
+    color: "text-rose-300",
+    bgColor: "bg-rose-400/15",
+  },
+  {
+    name: "Postman",
+    Icon: SiPostman,
+    color: "text-orange-300",
+    bgColor: "bg-orange-400/15",
+  },
+  {
+    name: "Ansible",
+    Icon: SiAnsible,
+    color: "text-red-300",
+    bgColor: "bg-red-500/15",
+  },
+  {
+    name: "Prometheus",
+    Icon: SiPrometheus,
+    color: "text-orange-300",
+    bgColor: "bg-orange-400/15",
+  },
+  {
+    name: "Terraform",
+    Icon: SiTerraform,
+    color: "text-violet-300",
+    bgColor: "bg-violet-400/15",
+  },
+  {
+    name: "Grafana",
+    Icon: SiGrafana,
+    color: "text-amber-300",
+    bgColor: "bg-amber-400/15",
+  },
+  {
+    name: "Microsoft Azure",
+    Icon: FaMicrosoft,
+    color: "text-sky-300",
+    bgColor: "bg-sky-400/15",
+  },
 ];
 
 const orbitPositions = [
