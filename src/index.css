@@ -88,8 +88,8 @@
 @layer utilities {
   .glass-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
   }
@@ -132,14 +132,14 @@
 
   .marquee-row {
     overflow: hidden;
-    mask-image: linear-gradient(
+    -webkit-mask-image: linear-gradient(
       to right,
       transparent 0%,
       black 10%,
       black 90%,
       transparent 100%
     );
-    -webkit-mask-image: linear-gradient(
+    mask-image: linear-gradient(
       to right,
       transparent 0%,
       black 10%,
@@ -223,5 +223,117 @@
   .shimmer-btn::after {
     transform: translate3d(0, 0, 0);
     will-change: transform;
+  }
+
+  .orbit-rotate {
+    --orbit-radius: 190px;
+    animation: orbit-spin 80s linear infinite;
+    transform-origin: center;
+  }
+
+  .orbit-rotate--outer {
+    --orbit-radius: 200px;
+  }
+
+  .orbit-rotate--inner {
+    --orbit-radius: 130px;
+    animation-direction: reverse;
+    animation-duration: 60s;
+  }
+
+  .orbit-item {
+    transform: translate(-50%, -50%) rotate(var(--orbit-angle))
+      translateX(var(--orbit-radius));
+    animation: orbit-float 6s ease-in-out infinite;
+  }
+
+  .orbit-item-inner {
+    animation: orbit-counter-spin 80s linear infinite;
+  }
+
+  .orbit-pos-0 {
+    --orbit-angle: 0deg;
+  }
+
+  .orbit-pos-1 {
+    --orbit-angle: 25.714deg;
+  }
+
+  .orbit-pos-2 {
+    --orbit-angle: 51.428deg;
+  }
+
+  .orbit-pos-3 {
+    --orbit-angle: 77.142deg;
+  }
+
+  .orbit-pos-4 {
+    --orbit-angle: 102.857deg;
+  }
+
+  .orbit-pos-5 {
+    --orbit-angle: 128.571deg;
+  }
+
+  .orbit-pos-6 {
+    --orbit-angle: 154.285deg;
+  }
+
+  .orbit-pos-7 {
+    --orbit-angle: 180deg;
+  }
+
+  .orbit-pos-8 {
+    --orbit-angle: 205.714deg;
+  }
+
+  .orbit-pos-9 {
+    --orbit-angle: 231.428deg;
+  }
+
+  .orbit-pos-10 {
+    --orbit-angle: 257.142deg;
+  }
+
+  .orbit-pos-11 {
+    --orbit-angle: 282.857deg;
+  }
+
+  .orbit-pos-12 {
+    --orbit-angle: 308.571deg;
+  }
+
+  .orbit-pos-13 {
+    --orbit-angle: 334.285deg;
+  }
+
+  @keyframes orbit-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes orbit-counter-spin {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes orbit-float {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) rotate(var(--orbit-angle))
+        translateX(var(--orbit-radius));
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(var(--orbit-angle))
+        translateX(var(--orbit-radius)) translateY(-8px);
+    }
   }
 }
