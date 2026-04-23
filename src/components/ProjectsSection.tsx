@@ -76,7 +76,13 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ project, index }: { project: (typeof projects)[0]; index: number }) => (
+const ProjectCard = ({
+  project,
+  index,
+}: {
+  project: (typeof projects)[0];
+  index: number;
+}) => (
   <motion.a
     href={project.github}
     target="_blank"
@@ -102,7 +108,9 @@ const ProjectCard = ({ project, index }: { project: (typeof projects)[0]; index:
     </div>
     <div className="absolute bottom-0 left-0 right-0 p-5">
       <div className="glass-card rounded-2xl border border-white/10 bg-black/40 px-4 py-3">
-        <h3 className="text-lg font-semibold text-foreground md:text-xl">{project.title}</h3>
+        <h3 className="text-lg font-semibold text-foreground md:text-xl">
+          {project.title}
+        </h3>
         <p className="mt-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           {project.subtitle}
         </p>
@@ -121,8 +129,12 @@ const ProjectsSection = () => (
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <span className="font-mono text-xs text-accent tracking-widest uppercase">Portfolio</span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gradient-pink">Featured Projects</h2>
+        <span className="font-mono text-xs text-accent tracking-widest uppercase">
+          Portfolio
+        </span>
+        <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gradient-pink">
+          Featured Projects
+        </h2>
       </motion.div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
