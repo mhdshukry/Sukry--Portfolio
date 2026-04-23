@@ -38,6 +38,7 @@ type Skill = {
   Icon: ComponentType<{ className?: string }>;
   color: string;
   bgColor?: string;
+  chipTone?: string;
 };
 
 type SkillCategory = {
@@ -50,76 +51,76 @@ const skillCategories: SkillCategory[] = [
     title: "Programming Languages",
     skills: [
       { name: "HTML5", Icon: SiHtml5, color: "text-orange-400" },
-      { name: "CSS3", Icon: SiCss, color: "text-sky-400" },
-      { name: "JavaScript", Icon: SiJavascript, color: "text-yellow-400" },
-      { name: "PHP", Icon: SiPhp, color: "text-indigo-300" },
-      { name: "Java", Icon: FaJava, color: "text-amber-400" },
-      { name: "C", Icon: SiC, color: "text-blue-300" },
-      { name: "Dart", Icon: SiDart, color: "text-sky-300" },
-      { name: "Python", Icon: SiPython, color: "text-emerald-300" },
+      { name: "CSS3", Icon: SiCss, color: "text-sky-400", chipTone: "bg-sky-500/20 border-sky-400/30" },
+      { name: "JavaScript", Icon: SiJavascript, color: "text-yellow-400", chipTone: "bg-yellow-400/20 border-yellow-300/35" },
+      { name: "PHP", Icon: SiPhp, color: "text-indigo-400", chipTone: "bg-indigo-500/20 border-indigo-400/35" },
+      { name: "Java", Icon: FaJava, color: "text-orange-500", chipTone: "bg-orange-500/20 border-orange-400/35" },
+      { name: "C", Icon: SiC, color: "text-blue-500", chipTone: "bg-blue-500/20 border-blue-400/35" },
+      { name: "Dart", Icon: SiDart, color: "text-sky-400", chipTone: "bg-cyan-500/20 border-cyan-400/35" },
+      { name: "Python", Icon: SiPython, color: "text-blue-400", chipTone: "bg-blue-500/20 border-blue-400/35" },
     ],
   },
   {
     title: "Frontend",
     skills: [
-      { name: "HTML5", Icon: SiHtml5, color: "text-orange-400" },
-      { name: "CSS3", Icon: SiCss, color: "text-sky-400" },
-      { name: "JavaScript", Icon: SiJavascript, color: "text-yellow-400" },
-      { name: "React.js", Icon: SiReact, color: "text-cyan-300" },
+      { name: "HTML5", Icon: SiHtml5, color: "text-orange-400", chipTone: "bg-orange-500/20 border-orange-400/35" },
+      { name: "CSS3", Icon: SiCss, color: "text-sky-400", chipTone: "bg-sky-500/20 border-sky-400/35" },
+      { name: "JavaScript", Icon: SiJavascript, color: "text-yellow-400", chipTone: "bg-yellow-400/20 border-yellow-300/35" },
+      { name: "React.js", Icon: SiReact, color: "text-cyan-400", chipTone: "bg-cyan-500/20 border-cyan-400/35" },
     ],
   },
   {
     title: "Backend",
     skills: [
-      { name: "PHP", Icon: SiPhp, color: "text-indigo-300" },
-      { name: "Laravel", Icon: SiLaravel, color: "text-red-300" },
-      { name: "Node.js", Icon: SiNodedotjs, color: "text-green-300" },
-      { name: "Express.js", Icon: SiExpress, color: "text-neutral-300" },
-      { name: "Java", Icon: FaJava, color: "text-amber-400" },
-      { name: "JavaFX", Icon: FaJava, color: "text-orange-300" },
-      { name: "Spring Boot", Icon: SiSpringboot, color: "text-lime-300" },
-      { name: "REST API", Icon: FaDiagramProject, color: "text-emerald-300" },
-      { name: "Python", Icon: SiPython, color: "text-emerald-300" },
-      { name: "C", Icon: SiC, color: "text-blue-300" },
+      { name: "PHP", Icon: SiPhp, color: "text-indigo-400", chipTone: "bg-indigo-500/20 border-indigo-400/35" },
+      { name: "Laravel", Icon: SiLaravel, color: "text-red-500", chipTone: "bg-red-500/20 border-red-400/35" },
+      { name: "Node.js", Icon: SiNodedotjs, color: "text-green-500", chipTone: "bg-green-500/20 border-green-400/35" },
+      { name: "Express.js", Icon: SiExpress, color: "text-stone-100", chipTone: "bg-slate-200/10 border-slate-300/25" },
+      { name: "Java", Icon: FaJava, color: "text-orange-500", chipTone: "bg-orange-500/20 border-orange-400/35" },
+      { name: "JavaFX", Icon: FaJava, color: "text-orange-500", chipTone: "bg-orange-500/20 border-orange-400/35" },
+      { name: "Spring Boot", Icon: SiSpringboot, color: "text-lime-500", chipTone: "bg-lime-500/20 border-lime-400/35" },
+      { name: "REST API", Icon: FaDiagramProject, color: "text-blue-400", chipTone: "bg-cyan-500/20 border-cyan-400/35" },
+      { name: "Python", Icon: SiPython, color: "text-blue-400", chipTone: "bg-blue-500/20 border-blue-400/35" },
+      { name: "C", Icon: SiC, color: "text-blue-500", chipTone: "bg-blue-500/20 border-blue-400/35" },
     ],
   },
   {
     title: "Mobile",
     skills: [
-      { name: "Flutter", Icon: SiFlutter, color: "text-sky-300" },
-      { name: "Dart", Icon: SiDart, color: "text-sky-300" },
+      { name: "Flutter", Icon: SiFlutter, color: "text-sky-400", chipTone: "bg-cyan-500/20 border-cyan-400/35" },
+      { name: "Dart", Icon: SiDart, color: "text-sky-400", chipTone: "bg-sky-500/20 border-sky-400/35" },
     ],
   },
   {
     title: "Databases",
     skills: [
-      { name: "MySQL", Icon: SiMysql, color: "text-sky-300" },
-      { name: "MongoDB", Icon: SiMongodb, color: "text-lime-300" },
+      { name: "MySQL", Icon: SiMysql, color: "text-sky-400", chipTone: "bg-sky-500/20 border-sky-400/35" },
+      { name: "MongoDB", Icon: SiMongodb, color: "text-lime-500", chipTone: "bg-lime-500/20 border-lime-400/35" },
     ],
   },
   {
     title: "DevOps",
     skills: [
-      { name: "Docker", Icon: SiDocker, color: "text-cyan-300" },
-      { name: "Jenkins", Icon: SiJenkins, color: "text-rose-300" },
-      { name: "Ansible", Icon: SiAnsible, color: "text-red-300" },
-      { name: "Prometheus", Icon: SiPrometheus, color: "text-orange-300" },
-      { name: "Terraform", Icon: SiTerraform, color: "text-violet-300" },
-      { name: "Grafana", Icon: SiGrafana, color: "text-amber-300" },
+      { name: "Docker", Icon: SiDocker, color: "text-cyan-400", chipTone: "bg-cyan-500/20 border-cyan-400/35" },
+      { name: "Jenkins", Icon: SiJenkins, color: "text-rose-400", chipTone: "bg-rose-500/20 border-rose-400/35" },
+      { name: "Ansible", Icon: SiAnsible, color: "text-red-500", chipTone: "bg-red-500/20 border-red-400/35" },
+      { name: "Prometheus", Icon: SiPrometheus, color: "text-orange-500", chipTone: "bg-orange-500/20 border-orange-400/35" },
+      { name: "Terraform", Icon: SiTerraform, color: "text-violet-400", chipTone: "bg-violet-500/20 border-violet-400/35" },
+      { name: "Grafana", Icon: SiGrafana, color: "text-amber-500", chipTone: "bg-amber-500/20 border-amber-400/35" },
     ],
   },
   {
     title: "Tools",
     skills: [
-      { name: "Git", Icon: SiGit, color: "text-orange-400" },
-      { name: "GitHub", Icon: SiGithub, color: "text-foreground" },
-      { name: "Postman", Icon: SiPostman, color: "text-orange-300" },
+      { name: "Git", Icon: SiGit, color: "text-orange-400", chipTone: "bg-orange-500/20 border-orange-400/35" },
+      { name: "GitHub", Icon: SiGithub, color: "text-slate-100", chipTone: "bg-slate-200/10 border-slate-300/25" },
+      { name: "Postman", Icon: SiPostman, color: "text-orange-500", chipTone: "bg-orange-500/20 border-orange-400/35" },
     ],
   },
   {
     title: "Cloud",
     skills: [
-      { name: "Microsoft Azure", Icon: FaMicrosoft, color: "text-sky-300" },
+      { name: "Microsoft Azure", Icon: FaMicrosoft, color: "text-sky-400", chipTone: "bg-sky-500/20 border-sky-400/35" },
     ],
   },
 ];
@@ -146,92 +147,92 @@ const orbitSkills: Skill[] = [
   {
     name: "React.js",
     Icon: SiReact,
-    color: "text-cyan-300",
+    color: "text-cyan-400",
     bgColor: "bg-cyan-400/15",
   },
   {
     name: "PHP",
     Icon: SiPhp,
-    color: "text-indigo-300",
+    color: "text-indigo-400",
     bgColor: "bg-indigo-400/15",
   },
   {
     name: "Laravel",
     Icon: SiLaravel,
-    color: "text-red-300",
+    color: "text-red-500",
     bgColor: "bg-red-500/15",
   },
   {
     name: "MySQL",
     Icon: SiMysql,
-    color: "text-sky-300",
+    color: "text-sky-400",
     bgColor: "bg-sky-400/15",
   },
   {
     name: "MongoDB",
     Icon: SiMongodb,
-    color: "text-lime-300",
+    color: "text-lime-500",
     bgColor: "bg-lime-400/15",
   },
   {
     name: "Express.js",
     Icon: SiExpress,
-    color: "text-neutral-300",
+    color: "text-stone-100",
     bgColor: "bg-slate-200/10",
   },
   {
     name: "Node.js",
     Icon: SiNodedotjs,
-    color: "text-green-300",
+    color: "text-green-500",
     bgColor: "bg-green-400/15",
   },
   {
     name: "Java",
     Icon: FaJava,
-    color: "text-amber-400",
+    color: "text-orange-500",
     bgColor: "bg-amber-400/15",
   },
   {
     name: "JavaFX",
     Icon: FaJava,
-    color: "text-orange-300",
+    color: "text-orange-500",
     bgColor: "bg-orange-400/15",
   },
-  { name: "C", Icon: SiC, color: "text-blue-300", bgColor: "bg-blue-400/15" },
+  { name: "C", Icon: SiC, color: "text-blue-500", bgColor: "bg-blue-400/15" },
   {
     name: "Dart",
     Icon: SiDart,
-    color: "text-sky-300",
+    color: "text-sky-400",
     bgColor: "bg-sky-400/15",
   },
   {
     name: "Python",
     Icon: SiPython,
-    color: "text-emerald-300",
+    color: "text-blue-400",
     bgColor: "bg-emerald-400/15",
   },
   {
     name: "Flutter",
     Icon: SiFlutter,
-    color: "text-sky-300",
+    color: "text-sky-400",
     bgColor: "bg-sky-400/15",
   },
   {
     name: "Spring Boot",
     Icon: SiSpringboot,
-    color: "text-lime-300",
+    color: "text-lime-500",
     bgColor: "bg-lime-400/15",
   },
   {
     name: "REST API",
     Icon: FaDiagramProject,
-    color: "text-emerald-300",
+    color: "text-blue-400",
     bgColor: "bg-emerald-400/15",
   },
   {
     name: "Docker",
     Icon: SiDocker,
-    color: "text-cyan-300",
+    color: "text-cyan-400",
     bgColor: "bg-cyan-400/15",
   },
   {
@@ -243,49 +244,49 @@ const orbitSkills: Skill[] = [
   {
     name: "GitHub",
     Icon: SiGithub,
-    color: "text-foreground",
+    color: "text-slate-100",
     bgColor: "bg-slate-100/20",
   },
   {
     name: "Jenkins",
     Icon: SiJenkins,
-    color: "text-rose-300",
+    color: "text-rose-400",
     bgColor: "bg-rose-400/15",
   },
   {
     name: "Postman",
     Icon: SiPostman,
-    color: "text-orange-300",
+    color: "text-orange-500",
     bgColor: "bg-orange-400/15",
   },
   {
     name: "Ansible",
     Icon: SiAnsible,
-    color: "text-red-300",
+    color: "text-red-500",
     bgColor: "bg-red-500/15",
   },
   {
     name: "Prometheus",
     Icon: SiPrometheus,
-    color: "text-orange-300",
+    color: "text-orange-500",
     bgColor: "bg-orange-400/15",
   },
   {
     name: "Terraform",
     Icon: SiTerraform,
-    color: "text-violet-300",
+    color: "text-violet-400",
     bgColor: "bg-violet-400/15",
   },
   {
     name: "Grafana",
     Icon: SiGrafana,
-    color: "text-amber-300",
+    color: "text-amber-500",
     bgColor: "bg-amber-400/15",
   },
   {
     name: "Microsoft Azure",
     Icon: FaMicrosoft,
-    color: "text-sky-300",
+    color: "text-sky-400",
     bgColor: "bg-sky-400/15",
   },
 ];
@@ -329,7 +330,7 @@ const SkillsSection = () => {
       </motion.div>
 
       <div className="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="glass-card rounded-3xl p-6 md:p-8">
+        <div className="h-full glass-card rounded-3xl p-6 md:p-8">
           <div className="mb-6 flex items-center gap-3">
             <span className="h-2 w-2 rounded-full bg-red-500" />
             <h3 className="text-lg font-semibold">Skills by category</h3>
@@ -348,9 +349,11 @@ const SkillsSection = () => {
                   {category.skills.map((skill) => (
                     <span
                       key={skill.name}
-                      className="flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1 text-xs text-foreground/90"
+                      className={`skill-pill group flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-foreground/90 transition-all duration-300 hover:-translate-y-0.5 ${
+                        skill.chipTone ?? "border-white/10 bg-black/30"
+                      }`}
                     >
-                      <skill.Icon className={`text-sm ${skill.color}`} />
+                      <skill.Icon className={`skill-pill-icon text-sm ${skill.color}`} />
                       {skill.name}
                     </span>
                   ))}
@@ -360,7 +363,7 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        <div className="glass-card flex items-center justify-center rounded-3xl p-6 md:p-8">
+        <div className="flex h-full items-center justify-center rounded-3xl p-6 md:p-8">
           <div className="flex w-full flex-col items-center">
             <div className="relative aspect-square w-full max-w-[420px]">
               <div className="absolute left-1/2 top-1/2 flex h-40 w-40 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-white/10 bg-black/40 text-center">
@@ -378,7 +381,7 @@ const SkillsSection = () => {
                     className={`orbit-item ${orbitPositions[index % orbitPositions.length]} absolute left-1/2 top-1/2`}
                   >
                     <div
-                      className={`orbit-item-inner flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 shadow-lg ${
+                      className={`orbit-logo-chip orbit-item-inner flex h-11 w-11 items-center justify-center rounded-2xl shadow-[0_10px_24px_rgba(0,0,0,0.45)] ${
                         skill.bgColor ?? "bg-white/90"
                       }`}
                     >
@@ -394,7 +397,7 @@ const SkillsSection = () => {
                     className={`orbit-item ${orbitPositions[index % orbitPositions.length]} absolute left-1/2 top-1/2`}
                   >
                     <div
-                      className={`orbit-item-inner flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 shadow-lg ${
+                      className={`orbit-logo-chip orbit-item-inner flex h-10 w-10 items-center justify-center rounded-2xl shadow-[0_10px_24px_rgba(0,0,0,0.45)] ${
                         skill.bgColor ?? "bg-white/90"
                       }`}
                     >
