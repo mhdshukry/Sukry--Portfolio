@@ -1,75 +1,114 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Layers } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Rail Mate Lanka",
-    desc: "Train reservation system for checking schedules and booking tickets online.",
-    tech: ["React", "Node.js", "MySQL"],
-    color: "glow-violet",
-    span: "lg:col-span-8",
+    title: "Sukry Portfolio",
+    subtitle: "Front-End",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/Sukry--Portfolio",
   },
   {
-    title: "Apple Care+",
-    desc: "Apple product e-commerce platform with modern shopping experience.",
-    tech: ["React", "PHP", "CSS"],
-    color: "glow-cyan",
-    span: "lg:col-span-4",
+    title: "Drug Supply System",
+    subtitle: "Full-Stack Web",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/drug-supply-system",
+  },
+  {
+    title: "MrCherryComputer",
+    subtitle: "Full-Stack Web",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/MrCherryComputer",
+  },
+  {
+    title: "Apple Care",
+    subtitle: "Full-Stack Web",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/Apple_Care",
   },
   {
     title: "DriveXpert",
-    desc: "Vehicle booking platform for browsing cars and making reservations.",
-    tech: ["JavaScript", "Node.js", "MySQL"],
-    color: "glow-pink",
-    span: "lg:col-span-4",
+    subtitle: "Full-Stack Web",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/DriveXpert",
   },
   {
     title: "Job Portal",
-    desc: "Employment platform connecting employers with job seekers.",
-    tech: ["React", "PHP", "MySQL"],
-    color: "glow-violet",
-    span: "lg:col-span-8",
+    subtitle: "Full-Stack Web",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/Job-portal",
+  },
+  {
+    title: "Foody",
+    subtitle: "Front-End",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/Foody",
   },
   {
     title: "NewsLine",
-    desc: "University news management system for campus publications.",
-    tech: ["React", "Node.js", "MongoDB"],
-    color: "glow-cyan",
-    span: "lg:col-span-6",
+    subtitle: "Full-Stack Web",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/UOR---NEWSLINE",
   },
   {
-    title: "E-Foody",
-    desc: "Online food ordering system with menu browsing and order management.",
-    tech: ["HTML", "CSS", "PHP"],
-    color: "glow-pink",
-    span: "lg:col-span-6",
+    title: "Health App",
+    subtitle: "Mobile App",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/Health-App",
+  },
+  {
+    title: "Safe Ride Companion",
+    subtitle: "Full-Stack Web",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/safe-ride-companion",
+  },
+  {
+    title: "PrimeSoft Solution",
+    subtitle: "Full-Stack Web",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/PrimeSoft-Solution",
+  },
+  {
+    title: "Trail Mate Lanka",
+    subtitle: "Front-End",
+    image: "/placeholder.svg",
+    github: "https://github.com/mhdshukry/Trail-Mate-Lanka-Website",
   },
 ];
 
-const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => (
-  <motion.div
+const ProjectCard = ({ project, index }: { project: (typeof projects)[0]; index: number }) => (
+  <motion.a
+    href={project.github}
+    target="_blank"
+    rel="noreferrer"
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.6, delay: index * 0.1 }}
-    whileHover={{ scale: 1.02, rotateY: 2 }}
-    className={`glass-card rounded-2xl p-6 md:p-8 ${project.span} group cursor-pointer transition-all duration-500 hover:border-primary/30`}
-    style={{ transformStyle: "preserve-3d", perspective: "1000px" }}
+    transition={{ duration: 0.6, delay: index * 0.08 }}
+    whileHover={{ y: -6 }}
+    className="glass-card group relative block overflow-hidden rounded-3xl border border-white/10 bg-black/20 shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
   >
-    <div className="flex items-start justify-between mb-4">
-      <Layers size={24} strokeWidth={1.5} className="text-primary" />
-      <ExternalLink size={16} strokeWidth={1.5} className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+    <div className="relative aspect-[16/9] w-full overflow-hidden">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+      <div className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white/80 opacity-0 transition-opacity group-hover:opacity-100">
+        <ExternalLink size={16} strokeWidth={1.5} />
+      </div>
     </div>
-    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">{project.title}</h3>
-    <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{project.desc}</p>
-    <div className="flex flex-wrap gap-2">
-      {project.tech.map((t) => (
-        <span key={t} className="font-mono text-xs px-3 py-1 rounded-full bg-muted text-muted-foreground">
-          {t}
-        </span>
-      ))}
+    <div className="absolute bottom-0 left-0 right-0 p-5">
+      <div className="glass-card rounded-2xl border border-white/10 bg-black/40 px-4 py-3">
+        <h3 className="text-lg font-semibold text-foreground md:text-xl">{project.title}</h3>
+        <p className="mt-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          {project.subtitle}
+        </p>
+      </div>
     </div>
-  </motion.div>
+  </motion.a>
 );
 
 const ProjectsSection = () => (
@@ -86,7 +125,7 @@ const ProjectsSection = () => (
         <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gradient-pink">Featured Projects</h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {projects.map((p, i) => (
           <ProjectCard key={p.title} project={p} index={i} />
         ))}
