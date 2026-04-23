@@ -1,35 +1,43 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import appleCareImage from "@/assets/applecare.png";
+import driveXpertImage from "@/assets/drivexpert.png";
+import drugSupplyImage from "@/assets/drugsupply.png";
+import foodyImage from "@/assets/foody.png";
+import mrCherryImage from "@/assets/Mrcherry.png";
+import portfolioImage from "@/assets/portfolio.png";
+import primeSoftImage from "@/assets/primesoft.png";
+import railMateImage from "@/assets/railmate.png";
 
 const projects = [
   {
     title: "Sukry Portfolio",
-    subtitle: "Front-End",
-    image: "/placeholder.svg",
+    subtitle: "Personal Portfolio",
+    image: portfolioImage,
     github: "https://github.com/mhdshukry/Sukry--Portfolio",
   },
   {
     title: "Drug Supply System",
     subtitle: "Full-Stack Web",
-    image: "/placeholder.svg",
+    image: drugSupplyImage,
     github: "https://github.com/mhdshukry/drug-supply-system",
   },
   {
     title: "MrCherryComputer",
     subtitle: "Full-Stack Web",
-    image: "/placeholder.svg",
+    image: mrCherryImage,
     github: "https://github.com/mhdshukry/MrCherryComputer",
   },
   {
     title: "Apple Care",
     subtitle: "Full-Stack Web",
-    image: "/placeholder.svg",
+    image: appleCareImage,
     github: "https://github.com/mhdshukry/Apple_Care",
   },
   {
     title: "DriveXpert",
     subtitle: "Full-Stack Web",
-    image: "/placeholder.svg",
+    image: driveXpertImage,
     github: "https://github.com/mhdshukry/DriveXpert",
   },
   {
@@ -40,8 +48,8 @@ const projects = [
   },
   {
     title: "Foody",
-    subtitle: "Front-End",
-    image: "/placeholder.svg",
+    subtitle: "Full-Stack Web",
+    image: foodyImage,
     github: "https://github.com/mhdshukry/Foody",
   },
   {
@@ -52,7 +60,7 @@ const projects = [
   },
   {
     title: "Health App",
-    subtitle: "Mobile App",
+    subtitle: "Full-Stack Web",
     image: "/placeholder.svg",
     github: "https://github.com/mhdshukry/Health-App",
   },
@@ -65,13 +73,13 @@ const projects = [
   {
     title: "PrimeSoft Solution",
     subtitle: "Full-Stack Web",
-    image: "/placeholder.svg",
+    image: primeSoftImage,
     github: "https://github.com/mhdshukry/PrimeSoft-Solution",
   },
   {
     title: "Trail Mate Lanka",
-    subtitle: "Front-End",
-    image: "/placeholder.svg",
+    subtitle: "Full-Stack Web",
+    image: railMateImage,
     github: "https://github.com/mhdshukry/Trail-Mate-Lanka-Website",
   },
 ];
